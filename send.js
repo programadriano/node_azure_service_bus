@@ -15,8 +15,8 @@ serviceBusService.createQueueIfNotExists('myqueue', queueOptions, function (erro
 });
 
 let pessoa = {
-    nome: "Thiago Adriano",
-    idade: 34
+    nome: "Dummy vídeos for Demo",
+    caminho: "./arquivos/video1280x720.mp4"
 };
 
 var message = {

@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "azure": "^2.3.1-preview"
+    "azure": "^2.3.1-preview",
+    "ffmpeg": "0.0.4",
+    "fluent-ffmpeg": "^2.1.2"
   }
 }
