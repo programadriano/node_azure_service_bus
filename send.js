@@ -1,6 +1,7 @@
 var azure = require('azure');
+const key = require('./config/azureKey');
 
-var serviceBusService = azure.createServiceBusService("");
+var serviceBusService = azure.createServiceBusService(key);
 
 var queueOptions = {
     MaxSizeInMegabytes: '5120',
@@ -19,11 +20,9 @@ let pessoa = {
 };
 
 var message = {
-    body: JSON.stringify(pessoa),
-    customProperties: {
-        testproperty: 'TestValue'
-    }
+    body: JSON.stringify(pessoa)
 };
+
 serviceBusService.sendQueueMessage('myqueue', message, function (error) {
     if (error != null) {
         console.error(error);

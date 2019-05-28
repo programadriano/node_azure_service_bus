@@ -1,7 +1,8 @@
 var azure = require('azure');
+const key = require('./config/azureKey');
 
 var serviceBusService =
-    azure.createServiceBusService("");
+    azure.createServiceBusService(key);
 
 
 serviceBusService.receiveQueueMessage('myqueue', function (error, receivedMessage) {
