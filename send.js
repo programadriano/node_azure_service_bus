@@ -14,13 +14,13 @@ serviceBusService.createQueueIfNotExists('myqueue', queueOptions, function (erro
     }
 });
 
-let pessoa = {
+let video = {
     nome: "Dummy vídeos for Demo",
     caminho: "./arquivos/video1280x720.mp4"
 };
 
 var message = {
-    body: JSON.stringify(pessoa)
+    body: JSON.stringify(video)
 };
 
 serviceBusService.sendQueueMessage('myqueue', message, function (error) {
